@@ -1,0 +1,108 @@
+.catalog {
+    padding-top: 256px;
+    padding-left: 197px;
+    padding-right: 197px;
+    .title {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 90.5%;
+
+        text-align: center;
+        letter-spacing: 0.04em;
+
+        color: #1c1c1c;
+        user-select: none;
+    }
+
+    .catalog__wrapper {
+        padding-top: 97px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 83px;
+        grid-row-gap: 48px;
+        padding-left: 107px;
+    }
+}
+
+.product {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+
+    width: 293.35px;
+    height: 556.72px;
+
+    .image {
+        width: 293px;
+        height: 392px;
+        padding-bottom: 24px;
+    }
+    .info__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .title__wrapper {
+            display: flex;
+            justify-content: space-between;
+            .name__wrapper {
+                display: flex;
+                flex-direction: column;
+
+                .name {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 120%;
+
+                    color: #000000;
+                }
+                .category {
+                    padding-top: 9px;
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12.9302px;
+                    line-height: 100%;
+
+                    color: #000000;
+                }
+            }
+            .price {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 21.8198px;
+                line-height: 100%;
+
+                text-align: justify;
+
+                color: #000000;
+            }
+        }
+
+        .button {
+            margin-top: 24px;
+            width: 293.35px;
+            height: 65px;
+            border-radius: 64.6512px;
+            border: 3.23256px solid #000000;
+            background-color: white;
+            .span {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 21.8198px;
+                line-height: 100%;
+                /* or 22px */
+
+                text-align: center;
+
+                color: #000000;
+            }
+        }
+    }
+}
