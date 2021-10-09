@@ -1,0 +1,21 @@
+.header {
+    display: grid;
+    z-index: 2;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    height: 128px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    svg {
+        margin-left: 114px;
+    }
+    .link {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 100%;
+        user-select: none;
+    }
+}

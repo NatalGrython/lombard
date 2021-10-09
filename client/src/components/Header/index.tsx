@@ -1,16 +1,15 @@
 import React from 'react'
-import classNames from './index.scss'
+import Logo from '../Logo'
+import classNames from './index.module.scss'
 
 const Header = () => {
     return (
-        <div className={classNames['.header']}>
-            <h1>Logo</h1>
-            <div>
-                <h1>Главная</h1>
-                <h1>Товары</h1>
-                <h1>Оценка</h1>
-                <h1>О нас</h1>
-            </div>
+        <div className={classNames.header}>
+            <Logo />
+            <h1 className={classNames.link}>Товары</h1>
+            <h1 className={classNames.link}>Продажа</h1>
+            <h1 className={classNames.link}>О нас</h1>
+            <h1 className={classNames.link}>Личный кабинет</h1>
         </div>
     )
 }
