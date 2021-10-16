@@ -15,4 +15,4 @@ jobs:
             - name: 'client'
               run: cd client && npm ci
             - name: 'server'
-              run: cd ../server && npm ci
+              run: cd server && npm ci
