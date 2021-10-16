@@ -12,7 +12,7 @@ import { ProductModule } from './Products/product.module';
     }),
     SequelizeModule.forRoot({
       dialect: 'postgres',
-      host: 'localhost',
+      host: 'postgres',
       port: 5432,
       username: 'root',
       password: 'root',
