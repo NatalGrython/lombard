@@ -2,7 +2,7 @@ FROM node:latest
 WORKDIR /app
 COPY . .
 RUN ls -a
-RUN ["chmod", "+x", "./installjs.sh"]
+RUN ["chmod", "+x", "./Installjs.sh"]
 RUN ./installjs.sh
 RUN  chmod +x ./start.sh
 
