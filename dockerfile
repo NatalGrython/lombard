@@ -1,12 +1,13 @@
 FROM node:latest
 WORKDIR /app
 COPY . .
-RUN cd server && npm i 
-RUN cd client && npm i
-RUN cd client && npm run build
-RUN cd server
-EXPOSE 3000
+RUN sudo chmod g+x .
+RUN sudo cd server && sudo npm i 
+RUN sudo cd client && sudo npm i
+RUN sudo cd client && sudo npm run build
+RUN sudo chmod +x ./start.sh
 
+EXPOSE 3000
 
 CMD ./start.sh
 
