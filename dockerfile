@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN ls -a
 RUN ["chmod", "+x", "./Installjs.sh"]
-RUN ./installjs.sh
+RUN ./Installjs.sh
 RUN  chmod +x ./start.sh
 
 EXPOSE 3000 
