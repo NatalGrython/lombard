@@ -1,1 +1,1 @@
-cd ./server && npm run start:dev
+cd ./server && npm run start:prod

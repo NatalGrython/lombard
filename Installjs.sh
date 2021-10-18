@@ -1,5 +1,6 @@
-cd server
+cd client
 npm i
-cd ../client
+npm run build
+cd ../server
 npm i
 npm run build
