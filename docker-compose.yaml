@@ -10,7 +10,7 @@ services:
         ports:
             - '5432:5432'
     web:
-        build: .
+        image: natalgrython/lombard:latest
         ports:
             - '3000:3000'
         links:

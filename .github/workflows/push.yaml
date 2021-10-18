@@ -49,4 +49,17 @@ jobs:
                   file: ./Dockerfile
                   push: true
                   tags: ${{ secrets.DOCKER_HUB_USERNAME }}/lombard:latest
-              
+    deploy:
+        runs-on: ubuntu-20.04
+        needs: [build]
+        steps:
+            - uses: appleboy/ssh-action@master
+              name: 'Ssh connect'
+              with:
+                  host: ${{ secrets.SSH_HOST_NAME }}
+                  username: ${{ secrets.SSH_USER_NAME }}
+                  key: ${{ secrets.SSH_SECRET_KEY }}
+                  script: |
+                      cd ~/lombard
+                      git pull origin master
+                      docker-compose up --build
