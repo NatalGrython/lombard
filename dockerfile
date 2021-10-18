@@ -1,11 +1,9 @@
 FROM node:latest
 WORKDIR /app
 COPY . .
-RUN chmod o+x /var/www
-RUN cd server && npm i 
-RUN cd client && npm i
-RUN cd client && npm run build
-RUN sudo chmod +x ./start.sh
+RUN chmod +x /installjs.sh
+RUN ./installjs.sh
+RUN  chmod +x ./start.sh
 
 EXPOSE 3000 
 
