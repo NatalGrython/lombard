@@ -9,6 +9,7 @@ services:
             POSTGRES_PASSWORD: root
         ports:
             - '5432:5432'
+        restart: always
     web:
         image: natalgrython/lombard:latest
         ports:
@@ -17,3 +18,4 @@ services:
             - postgres
         depends_on:
             - postgres
+        restart: always
