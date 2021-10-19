@@ -3,6 +3,18 @@ on:
   push:
 
 jobs:
+  checkout:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      # - uses: actions/setup-node@v1
+      #   name: "setup node"
+      #   with:
+      #     node-version: "13.x"
+      # - name: "client"
+      #   run: cd client && npm ci
+      # - name: "server"
+      #   run: cd server && npm ci
   test:
     runs-on: ubuntu-20.04
     needs: [checkout]
@@ -18,18 +30,6 @@ jobs:
         run: echo 'Test server'
       - name: "env"
         run: echo $VERSION
-  # checkout:
-  #   runs-on: ubuntu-20.04
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v1
-  #       name: "setup node"
-  #       with:
-  #         node-version: "13.x"
-  #     - name: "client"
-  #       run: cd client && npm ci
-  #     - name: "server"
-  #       run: cd server && npm ci
   # build:
   #     runs-on: ubuntu-20.04
   #     needs: [test]
