@@ -29,12 +29,7 @@ jobs:
       - name: "server"
         run: echo 'Test server'
       - name: "env"
-        run: echo "TAG_NAME = cat package.json \
-              | grep version \
-              | head -1 \
-              | awk -F: '{ print $2 }' \
-              | sed 's/[",]//g'
-              | tr -d '[[:space:]]'" >> $GITHUB_ENV
+        run: echo "TAG_NAME = cat package.json | grep version | head -1 | awk -F:/ '{ print $2 }' | sed 's/[",]//g'| tr -d '[[:space:]]'" >> $GITHUB_ENV
       - name: "env":
         run: echo "${{ env.TAG_NAME }}" 
         
