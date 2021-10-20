@@ -32,7 +32,7 @@ jobs:
       - name: "env"
         run: echo ::set-output name=TAG_NAME::${GITHUB_REF#refs/tags/}
         id: get_tag
-      - name: "env":
+      - name: "env get":
         run: echo "${{ env.TAG_NAME }}"
         env: 
           TAG_NAME: ${{ steps.get_tag.outputs.TAG_NAME }}
