@@ -24,7 +24,11 @@ jobs:
               name: 'setup node'
               with:
                   node-version: '13.x'
+            - name: 'client package'
+              run: cd client && npm ci
+            - name: 'server package'
+              run: cd server && npm ci
             - name: 'client'
               run: echo 'Test client'
             - name: 'server'
-              run: cd ./server && npm run test
+              run: cd server && npm run test
