@@ -1,5 +1,5 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
-import { Product } from 'src/Models/product.model';
+import { Product } from '../Models/product.model';
 import { ProductService } from './product.service';
 
 @Controller('products')
@@ -18,7 +18,6 @@ export class ProductController {
 
   @Post()
   async createProduct(@Body() product: Product) {
-    console.log(product);
     return this.productService.createProduct(product);
   }
 

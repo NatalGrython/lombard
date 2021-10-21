@@ -4,9 +4,13 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { Product } from './Models/product.model';
 import { ProductModule } from './Products/product.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      envFilePath: '../../.env',
+    }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', '..', 'client', 'build'),
     }),
@@ -14,9 +18,9 @@ import { ProductModule } from './Products/product.module';
       dialect: 'postgres',
       host: 'postgres',
       port: 5432,
-      username: 'root',
-      password: 'root',
-      database: 'root',
+      username: process.env.POSTGRES_USER,
+      password: process.env.POSTGRES_PASSWORD,
+      database: process.env.POSTGRES_DB,
       models: [Product],
       autoLoadModels: true,
     }),
